@@ -14,6 +14,8 @@
 		04E9A1DE1B201929007F467A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E9A1DD1B201929007F467A /* Images.xcassets */; };
 		04E9A1E11B201929007F467A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E9A1DF1B201929007F467A /* LaunchScreen.xib */; };
 		04E9A1ED1B201929007F467A /* ActionSheetDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9A1EC1B201929007F467A /* ActionSheetDemoTests.m */; };
+		04E9A2051B20359F007F467A /* TRActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9A2041B20359F007F467A /* TRActionSheetCell.m */; };
+		04E9A2081B2035EC007F467A /* TRActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9A2071B2035EC007F467A /* TRActionSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		04E9A1E61B201929007F467A /* ActionSheetDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionSheetDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E9A1EB1B201929007F467A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E9A1EC1B201929007F467A /* ActionSheetDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDemoTests.m; sourceTree = "<group>"; };
+		04E9A2031B20359F007F467A /* TRActionSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRActionSheetCell.h; sourceTree = "<group>"; };
+		04E9A2041B20359F007F467A /* TRActionSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRActionSheetCell.m; sourceTree = "<group>"; };
+		04E9A2061B2035EC007F467A /* TRActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRActionSheet.h; sourceTree = "<group>"; };
+		04E9A2071B2035EC007F467A /* TRActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRActionSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		04E9A1CF1B201929007F467A /* ActionSheetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04E9A1F91B201CF2007F467A /* TRActionSheet */,
 				04E9A1D41B201929007F467A /* AppDelegate.h */,
 				04E9A1D51B201929007F467A /* AppDelegate.m */,
 				04E9A1D71B201929007F467A /* ViewController.h */,
@@ -117,6 +124,17 @@
 				04E9A1EB1B201929007F467A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04E9A1F91B201CF2007F467A /* TRActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				04E9A2061B2035EC007F467A /* TRActionSheet.h */,
+				04E9A2071B2035EC007F467A /* TRActionSheet.m */,
+				04E9A2031B20359F007F467A /* TRActionSheetCell.h */,
+				04E9A2041B20359F007F467A /* TRActionSheetCell.m */,
+			);
+			path = TRActionSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +239,8 @@
 			files = (
 				04E9A1D91B201929007F467A /* ViewController.m in Sources */,
 				04E9A1D61B201929007F467A /* AppDelegate.m in Sources */,
+				04E9A2051B20359F007F467A /* TRActionSheetCell.m in Sources */,
+				04E9A2081B2035EC007F467A /* TRActionSheet.m in Sources */,
 				04E9A1D31B201929007F467A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ActionSheetDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ActionSheetDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
