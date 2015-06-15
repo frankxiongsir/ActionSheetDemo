@@ -137,13 +137,14 @@ CGFloat contentViewHeight;
 
 //set the otherButtonView height autoresizing
 - (CGFloat) getOtherButtonViewHeight:(NSArray *)Array{
-    CGFloat height = 44.0f;
+    CGFloat height = 0.0f;
     for (NSInteger i = 0; i < Array.count; i++) {
         NSString *otherButtonTitle = [Array objectAtIndex:i];
         CGFloat titleHeight = [self getHeightWithString:otherButtonTitle fontSize:OTHERBUTTON_FONT_SIZE width:[UIScreen mainScreen].bounds.size.width - 60];
         height += titleHeight;
     }
-    height = height>[UIScreen mainScreen].bounds.size.height - 150?[UIScreen mainScreen].bounds.size.height - 150:height;
+    CGFloat cellHeight = Array.count * 44.0f;
+    height = cellHeight < [UIScreen mainScreen].bounds.size.height - 150?cellHeight:(height>[UIScreen mainScreen].bounds.size.height - 150?[UIScreen mainScreen].bounds.size.height - 150:height);
     return height;
 }
 
